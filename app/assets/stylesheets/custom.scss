@@ -285,7 +285,7 @@
     .menu-nav ul li a:focus,
     .menu-nav ul li a:hover{
       background: none;
-      color: #ff4d4d;
+      color: #ffff00;
     }
     .menu-slide{
       position: relative;
@@ -319,11 +319,13 @@
       position: absolute;
       top: -230px;
       left: 0;
+      z-index: 998;
     }
     .menu-slide .bx-wrapper .bx-controls-direction .bx-next{
       position: absolute;
       top: -230px;
       right: 0;
+      z-index: 998;
     }
     .product-list {
       background: #fff;

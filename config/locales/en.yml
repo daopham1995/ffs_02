@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  currency: "$%{price}"
   please: "Please Login!"
   hello: "Hello world"
   welcome: "Welcome to"
@@ -27,18 +28,34 @@ en:
   time:
     formats:
       date: "%d/%m/%Y"
+      default: "%d-%m-%Y"
   home: "Home"
   framgia: "Framgia"
   signup: "Sign up"
   update: "Update"
   back: "Back"
   edit: "Edit"
+  flash:
+    danger:
+      staff: "Employees are not allowed to order"
+      order_total: "Order value cannot be zero"
   waiting: "Waiting"
   accepted: "Accepted"
   rejected: "Rejected"
   finished: "Finished"
   layouts:
     header:
+      store: "Restaurants"
+      ship: "Ship nationwide"
+      ship_text: "Fast Food Stores delivery nationwide"
+      check: "Check at home"
+      check_text: "Upon receiving the goods you can open the check, if the goods such as order you can refuse the receipt, free of charge and apply nationwide"
+      money: "Take money at home"
+      money_text: "Customers receive goods at home, charges will be calculated on orders"
+      cart: "Cart"
+      cart_text: "This is your cart, click here to view the products in the cart"
+      hotline: "HOT LINE"
+      phone: "01659882381"
       about_us: "About Us"
       menu: "Menu"
       membership: "Membership"
@@ -48,9 +65,33 @@ en:
       contact_us: "Contact Us"
       login: "Login"
       logout: "Logout"
+    footer:
+      call: "Call me: 01659 882 381"
+      product: "Product"
+      chicken: "Fried chicken"
+      rice: "Rice"
+      food: "Snacks"
+      fruit: "Desserts"
+      humberger: "Humburger"
+      support: "Customer support"
+      support_1: "Shopping guide"
+      support_2: "Payment and certification"
+      about_us: "About Us"
+      intro: "Introduction"
+      map: "Google Map"
+      company: "Company"
+      company_name: "Framgia Company"
+      company_add: "Pham hung street, Tu liem, Ha noi"
+      company_tel: "Tel: 01659 882 381"
+      company_email: "Email: dungvuit@gmail.com"
+      company_web: "Website: www.fastfood.vn"
+      intro: "Introduction"
+      guide: "Guide"
+      contact: "Contact"
     banner:
       find_restaurant: "Find the nearest restaurant"
   users:
+    button_view: "Add"
     registrations:
       edit:
         blank: "(leave blank if you don't want to change it)"
@@ -66,7 +107,40 @@ en:
       home:
         staff_home: "Staffs Central"
         staff_des: "Homepage of staffs"
+    sessions:
+      new:
+        email: "Email"
+        password: "Password"
+  orders:
+    show:
+      cart: "Cart"
+      total_pay: "Total pay"
+      price: "Price"
+      product: "Product"
+      total: "Total"
+      continue: "Continue"
+      checkout: "Checkout"
+    checkout_modal:
+      receiver: " Receiver "
+      number: " Number phone "
+      address: " Address "
+      checkout: " Checkout "
+      send: "Send"
   views:
+    layout:
+      header:
+        all_category: "All Category"
+      modal:
+        name: "Name"
+        status: "Status"
+        description: "Description"
+        price: "Price"
+        name_cat: "Name category"
+        available: "Available"
+        unavailable: "Unavailable"
+        close: "Close"
+        title_details: "Title details"
+        quantity: "Choose quantity: "
     errors_contain: "The form contains"
     error: "error"
     search: "Search"
@@ -77,6 +151,15 @@ en:
     users:
       index: "Home"
       details: "Product details"
+    products:
+      index:
+        add: "Add"
+      show:
+        add_cart: "Add to cart"
+        products: "Product"
+    order_details:
+      order_detail:
+        confir_delete: "Confirm delete"
     admins:
       form:
         shop_id: "Shop ID"
@@ -137,6 +220,34 @@ en:
         copy_right: "2017 Website developed by"
         name_team: "RUBY TEAM"
   admin:
+    shippers:
+      index:
+        shipper_manage: "List order"
+        order_list: "List"
+      list_orders:
+        rec_name: "Customer name"
+        rec_addr: "Address "
+        rec_phone: "Number phone"
+        order_details: "Order details"
+        total: "Total"
+        status: "Status"
+        abort: "Abort"
+        finished: "Finished"
+
+    chefs:
+      index:
+        chef_manage: "List order"
+        order_list: "List"
+      list_orders:
+        rec_name: "Customer name"
+        order_details: "Order details"
+        created_at: "Created at"
+        status: "Status"
+        accept: "accept"
+        reject: "Reject"
+        accepted: "Accepted"
+        rejected: "Rejected"
+        waiting: "Waiting"
     orders:
       list_orders:
         id: "Order ID"
@@ -152,6 +263,10 @@ en:
         order_list: "Manage Order"
         order: "Unassigned Order"
         order_assign: "Assigned Order"
+    products:
+      list_product:
+        available: "Available"
+        unavailable: "Unavailable"
     discounts:
       index:
         show: "Discount"

@@ -25,7 +25,7 @@
               <p><%= t "views.layout.modal.description" %>:&nbsp;
                 <%= product.description %></p>
               <p><%= t "views.admins.form.price" %>:&nbsp;
-                <%= number_to_currency product.price %></p>
+                <%= t("currency", price: product.price) %>
               <p><%= t "views.layout.modal.name_cat" %>:&nbsp;
                 <%= link_to "#" do %>
                   <% product.categories.each do |category| %>

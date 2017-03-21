@@ -21,6 +21,13 @@
         <div class="menu-top-1">
           <div class="col-sm-8">
             <ul class="nav">
+              <% ["vi", "en"].each do |lang| %>
+                <li>
+                  <%= link_to locale: lang do %>
+                    <%= image_tag "#{lang}.png" %>
+                  <% end %>
+                </li>
+              <% end %>
               <li class="menu-top1-19">
                 <%= link_to "#" do %>
                   <%= t "layouts.header.ship" %>
@@ -67,7 +74,7 @@
       <div class="row">
         <div class="col-sm-4">
           <div class="logo">
-            <%= link_to "#" do %>
+            <%= link_to root_path do %>
               <%= image_tag "logo1.png" %>
             <% end %>
           </div>
@@ -75,7 +82,7 @@
         <div class="col-sm-4">
           <% if current_page?(products_path && root_path) %>
             <div class="top-search">
-              <%= form_tag "#", method: :get, id: "form-search", remote: true do %>
+              <%= form_tag products_path, method: :get, id: "form-search", remote: true do %>
                 <%= text_field_tag :search, params[:search],
                   placeholder: t("views.input.value") %>
                 <%= button_tag do %>
@@ -107,7 +114,7 @@
               <%= t "views.layout.header.all_category" %>
             <% end %>
             <% @categories.each do |category| %>
-              <%= link_to products_path(search: {category_name: category}), remote: true do %>
+              <%= link_to products_path(search_cate: {category_name: category}), remote: true do %>
                 <%= category %>
               <% end %>
             <% end %>

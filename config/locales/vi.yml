@@ -1,4 +1,5 @@
 vi:
+  currency: "%{price} Vnd"
   please: "Làm ơn đăng nhập!"
   hello: "Chào thế giới"
   welcome: "Chào mừng đến với"
@@ -17,6 +18,10 @@ vi:
     danger:
       staff: "Nhân viên không được phép đặt hàng"
       order_total: "Giá trị đơn hàng không được bằng không"
+  waiting: "Đang chờ"
+  accepted: "Được chấp nhận"
+  rejected: "Từ chối"
+  finished: "Đã kết thúc"
   layouts:
     header:
       store: "Chuỗi nhà hàng"
@@ -85,7 +90,7 @@ vi:
     sessions:
       new:
         email: "Email"
-        password: "Password"
+        password: "Mật khẩu"
   orders:
     show:
       cart: "Giỏ hàng"
@@ -229,8 +234,9 @@ vi:
         rec_phone : "Số điện thoại người nhận"
         status: "Trạng thái đơn hàng"
         total: "Toàn bộ"
-        at: "Tạo ra"
+        at: "Ngày tạo"
         assign : "Chuyển giao"
+        shop_assign : "Đã nhận"
         take : "Lấy"
       index:
         order_list: "Quản lý đơn hàng"
@@ -255,6 +261,8 @@ vi:
         action: "Hoạt động"
       discount:
         confirm: "Bạn có chắc không"
+        active: "Có"
+        inactive: "Không"
       form:
         title: "Tên"
         description: "Mô tả"
@@ -265,6 +273,9 @@ vi:
         action: "Hoạt động"
       new:
         new: "Thêm mới"
+      edit:
+        edit: "Sửa"
+        export: "Xuất file excel"
   controllers:
     admins:
       product:
