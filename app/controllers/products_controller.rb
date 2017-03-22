@@ -4,10 +4,12 @@ class ProductsController < ApplicationController
 
   def index
     @categories  = Category.pluck :name
-    if params[:search]
-      category = Category.find_by name: params[:search][:category_name]
+    if params[:search_cate]
+      category = Category.find_by name: params[:search_cate][:category_name]
       @products = category.products
-    else
+    elsif params[:search].present?
+      @products = Product.search_product(params[:search])
+    else  
       @products = Product.all
     end
   end

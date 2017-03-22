@@ -54,6 +54,6 @@ class Admin::StaffsController < ApplicationController
   end
 
   def load_position_staff
-  	@position = Staff.positions.keys
+    @position = Staff.positions.keys
   end
 end

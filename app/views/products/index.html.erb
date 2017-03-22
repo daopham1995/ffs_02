@@ -19,7 +19,7 @@
             <% end %>
           </div>
           <div class="price-product pull-left" style="color: red; font-size: 20px;">
-            <%= number_to_currency product.price %>
+            <%= t("currency", price: product.price) %>
           </div>
           <div class="view-product pull-right">
             <%= link_to "#", "data-toggle": "modal",

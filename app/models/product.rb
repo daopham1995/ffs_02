@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
   scope :sort_by_create_at, -> {order created_at: :desc}
+  scope :search_product, -> search{where "name LIKE ?", "%#{search}%"}
 
   enum status: [:available, :unavailable]
 

@@ -1,9 +1,9 @@
 <tr>
   <td class="col-sm-8 col-md-6">
     <div class="media">
-      <%= link_to product_path(order_detail.product), class: "order_image pull-left" do %>
+      <div class="order_image pull-left">
         <%= default_image order_detail.product %>
-      <% end %>
+      </div>
       <div class="media-body">
         <h2 class="media-heading"><%= order_detail.product.name %></h2>
       </div>
