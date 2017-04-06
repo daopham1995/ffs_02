@@ -27,6 +27,7 @@ gem "toastr-rails"
 gem "react_on_rails", "~> 6"
 gem "foreman"
 gem 'autoprefixer-rails'
+gem "i18n-js", ">= 3.0.0.rc11"
 
 group :development, :test do
   gem "sqlite3", "1.3.12"
