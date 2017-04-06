@@ -6,20 +6,22 @@
     <%= render "layouts/shim" %>
   </head>
   <body id="users">
-    <div class="user">
-      <%= render "layouts/header" %>
-      <% unless flash.empty? %>
-        <script type="text/javascript">
-          <% flash.each do |f| %>
-            <% type = f[0].to_s.gsub("alert", "error").gsub("notice", "info") %>
-            toastr['<%= type %>']('<%= f[1] %>');
-          <% end %>
-        </script>
-      <% end %>
-      <div class="container">
-        <%= render "/layouts/slide" %>
-        <%= yield %>
-        <%= render "/layouts/footer" %>
+    <div class="wrapper">
+        <%= render "layouts/header_user" %>
+      <div class="user">
+        <% unless flash.empty? %>
+          <script type="text/javascript">
+            <% flash.each do |f| %>
+              <% type = f[0].to_s.gsub("alert", "error").gsub("notice", "info") %>
+              toastr['<%= type %>']('<%= f[1] %>');
+            <% end %>
+          </script>
+        <% end %>
+        <div class="container">
+          <%= render "/layouts/slide" %>
+          <%= yield %>
+          <%= render "/layouts/footer" %>
+        </div>
       </div>
     </div>
   </body>
