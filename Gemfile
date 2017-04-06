@@ -24,6 +24,9 @@ gem "cancancan", "~> 1.10"
 gem "bootstrap-datepicker-rails"
 gem "bxslider-rails"
 gem "toastr-rails"
+gem "react_on_rails", "~> 6"
+gem "foreman"
+gem 'autoprefixer-rails'
 
 group :development, :test do
   gem "sqlite3", "1.3.12"
@@ -50,3 +53,5 @@ group :production do
 end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'mini_racer', platforms: :ruby

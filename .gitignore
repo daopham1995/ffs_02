@@ -33,3 +33,9 @@ config/environments/*.local.yml
 config/settings.local.yml
 config/settings/*.local.yml
 config/environments/*.local.yml
+# React on Rails
+npm-debug.log*
+node_modules
+
+# Generated js bundles
+/app/assets/webpack/*
