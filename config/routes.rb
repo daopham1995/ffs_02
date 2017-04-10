@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   scope "(:locale)", locale: /en|vi/ do
     get 'hello_world', to: 'hello_world#index'
     devise_for :staffs, controllers: {sessions: "staffs/sessions"}
