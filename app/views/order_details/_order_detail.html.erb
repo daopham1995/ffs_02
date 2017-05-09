@@ -2,7 +2,7 @@
   <td class="col-sm-8 col-md-6">
     <div class="media">
       <div class="order_image pull-left">
-        <%= default_image order_detail.product %>
+        <%= image_tag default_image(order_detail.product) %>
       </div>
       <div class="media-body">
         <h2 class="media-heading"><%= order_detail.product.name %></h2>

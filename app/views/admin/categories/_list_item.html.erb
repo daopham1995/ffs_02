@@ -12,7 +12,7 @@
   <% @category.products.each do |product| %>
     <tr class="background-tr">
       <td class="img-product">
-        <%= default_image product %>
+        <%= image_tag default_image(product) %>
       </td>
       <td><%= product.name %></td>
       <td><%= number_to_currency product.price %></td>

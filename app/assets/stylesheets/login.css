@@ -88,7 +88,7 @@
   .staff .container .info span .fa {
     color: #EF3B3A;
   }
-  body {
+  #admins {
     background: url("login_background.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;

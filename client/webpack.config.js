@@ -25,8 +25,15 @@ const config = {
   resolve: {
     extensions: ['', '.js', '.jsx'],
     alias: {
+      constants: path.join(process.cwd(), 'app', 'constants'),
+      policy: path.join(process.cwd(), 'app', 'bundles', 'policies', 'components'),
       react: path.resolve('./node_modules/react'),
       'react-dom': path.resolve('./node_modules/react-dom'),
+      shared: path.join(process.cwd(), 'app', 'bundles', 'components', 'shareds'),
+      config: path.join(process.cwd(), 'app', 'config'),
+      breadcrumb: path.join(process.cwd(),
+        'app', 'bundles', 'components', 'shareds', 'bread_crumb'),
+      assets: path.join(process.cwd(), 'app', 'bundles', 'assets'),
     },
   },
   plugins: [
@@ -46,6 +53,14 @@ const config = {
         test: /\.jsx?$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass']
+      },
+      {
+        test: /\.css$/,
+        loaders: ['style', 'css']
       },
     ],
   },
