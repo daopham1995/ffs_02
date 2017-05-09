@@ -215,6 +215,7 @@ en:
           order: "Order"
           unassign: "Unassigned"
           assign: "Assigned"
+          combo: "Combos"
       body:
       footer:
         copy_right: "2017 Website developed by"
@@ -345,3 +346,15 @@ en:
         precision: 2
         significant: false
         strip_insignificant_zeros: false
+  combos:
+    all: "All Combos"
+    create: "Create Combo"
+    select_image: "Select image"
+    name: "Name"
+    description: "Description"
+    com_value: "Price"
+    save: "Save"
+    edit: "Edit"
+    delete: "Delete"
+    image: "Image"
+    confirm_delete: "Are you sure?"

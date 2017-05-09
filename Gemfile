@@ -31,12 +31,15 @@ gem "i18n-js", ">= 3.0.0.rc11"
 
 group :development, :test do
   gem "sqlite3", "1.3.12"
+  gem "pry"
   gem "byebug", "9.0.0", platform: :mri
 end
 
 group :development do
   gem "web-console", "3.1.1"
   gem "listen", "3.0.8"
+  gem "pry-rails"
+  gem "pry-byebug"
   gem "spring", "1.7.2"
   gem "spring-watcher-listen", "2.0.0"
 end

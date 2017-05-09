@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
+  include ApplicationHelper
   before_action :set_locale
 
   rescue_from CanCan::AccessDenied do |exception|

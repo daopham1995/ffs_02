@@ -56,6 +56,12 @@
             <%= t "views.admins.header.menu.category" %>
         <% end %>
       </li>
+      <li class="<%= "actived" if current_page?(admin_combos_path) %>">
+        <%= link_to admin_combos_path do %>
+          <i class="fa fa-th"></i>
+            <%= t "views.admins.header.menu.combo" %>
+        <% end %>
+      </li>
       <li class="menu-parent <%= "actived" if current_page?(admin_orders_path) %>">
         <%= link_to admin_orders_path(order: "order") do %>
           <i class="fa fa-money"></i>
