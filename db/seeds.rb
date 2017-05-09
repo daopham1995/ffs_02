@@ -5,36 +5,36 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.create! name: "Eins",
-  email: "eins@gmail.com",
+User.create! name: "Dao Pham",
+  email: "daopt22@gmail.com",
   password: "123456",
   password_confirmation: "123456",
   phone: "01675899424",
   address: "Neifheim"
 
-Staff.create! name: "Zwei",
-  email: "zwei@gmail.com",
-  password: "111111",
-  password_confirmation: "111111",
+Staff.create! name: "admin",
+  email: "admin@gmail.com",
+  password: "123456",
+  password_confirmation: "123456",
   position: "admin"
 
-Staff.create! name: "Drei",
-  email: "drei@gmail.com",
-  password: "111111",
-  password_confirmation: "111111",
+Staff.create! name: "shipper",
+  email: "shipper@gmail.com",
+  password: "123456",
+  password_confirmation: "123456",
   position: "owner",
   shop_id: "1"
 
-Staff.create! name: "Vier",
-  email: "vier@gmail.com",
-  password: "111111",
-  password_confirmation: "111111",
+Staff.create! name: "staff",
+  email: "staff@gmail.com",
+  password: "123456",
+  password_confirmation: "123456",
   position: "chef",
   shop_id: "1"
 
-Staff.create! name: "Funf",
-  email: "funf@gmail.com",
-  password: "111111",
-  password_confirmation: "111111",
+Staff.create! name: "staff1",
+  email: "staff1@gmail.com",
+  password: "123456",
+  password_confirmation: "123456",
   position: "shipper",
   shop_id: "1"

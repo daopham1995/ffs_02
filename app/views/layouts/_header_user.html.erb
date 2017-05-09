@@ -1,1 +1,52 @@
-<%= react_component("HeaderUser", prerender: false)%>
+<div class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="pushleft">
+          <div class="top">
+            <% if user_signed_in? %>
+              <a class="btn btn-default btn-dark">
+                <%= image_tag "#{"my-account-hover-icon"}.png"%>
+                <%= current_user.name %>
+              </a>&nbsp;&nbsp;
+              <%= link_to destroy_user_session_path, class: "btn btn-default btn-dark", method: :delete do %>
+                <i class="fa fa-sign-out"></i>
+                <%= t "views.admins.header.logout" %>
+              <% end %>
+            <% else %>
+              <%= link_to user_session_path, class: "btn btn-default btn-dark" do %>
+                <%= t "login" %>
+              <% end %>
+              <%= link_to new_user_registration_path, class: "btn btn-default btn-dark" do %>
+                <%= t "signup" %>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="pushright">
+          <div class="top">
+            <% ["vi", "en"].each do |lang| %>
+              <div class="srch-wrap">
+                <%= link_to locale: lang do %>
+                  <div class= "btn btn-default btn-search">
+                    <%= image_tag "#{lang}.png"%>
+                  </div>
+                <% end %>
+              </div>
+            <% end %>
+            &nbsp;&nbsp;
+            <% if current_order.id %>
+              <%= link_to order_path(current_order), class: "btn btn-default btn-dark" do %>
+                <span class="fa fa-cart-plus"></span>
+                <%= t "layouts.header.cart" %>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dashed"></div>
+</div>

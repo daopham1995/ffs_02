@@ -12,24 +12,26 @@
       I18n.locale = "<%= I18n.locale %>";
     </script>
   </head>
-  <body id="users">
+  <body >
     <div class="wrapper">
-        <%= render "layouts/header_user" %>
-      <div class="user">
-        <% unless flash.empty? %>
-          <script type="text/javascript">
-            <% flash.each do |f| %>
-              <% type = f[0].to_s.gsub("alert", "error").gsub("notice", "info") %>
-              toastr['<%= type %>']('<%= f[1] %>');
-            <% end %>
-          </script>
-        <% end %>
-        <div class="container">
-          <%= render "/layouts/slide" %>
-          <%= yield %>
-          <%= render "/layouts/footer" %>
+      <%= render "layouts/header_user" %>
+      <div id="users">
+        <div class="user">
+          <%= render "layouts/header" %>
+          <% unless flash.empty? %>
+            <script type="text/javascript">
+              <% flash.each do |f| %>
+                <% type = f[0].to_s.gsub("alert", "error").gsub("notice", "info") %>
+                toastr['<%= type %>']('<%= f[1] %>');
+              <% end %>
+            </script>
+          <% end %>
         </div>
       </div>
+      <div class="container">
+        <%= yield %>
+      </div><br><br>
+      <%= render "/layouts/footer" %>
     </div>
   </body>
 </html>
