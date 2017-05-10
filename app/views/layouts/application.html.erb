@@ -6,8 +6,15 @@
     <%= render "layouts/shim" %>
     <%= stylesheet_link_tag "application", media: "all",
       "data-turbolinks-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+    <%= javascript_include_tag "application",
+      "data-turbolinks-track": "reload" %>
+    <meta name="turbolinks-cache-control" content="no-cache">
     <script type="text/javascript">
+      $(document).on('ready turbolinks:load', function() {
+        $('#popcart').on("click", function(){
+          $('.popcart').toggle();
+        });
+      })
       I18n.defaultLocale = "<%= I18n.default_locale %>";
       I18n.locale = "<%= I18n.locale %>";
     </script>
@@ -26,11 +33,9 @@
               <% end %>
             </script>
           <% end %>
+          <%= yield %>
         </div>
       </div>
-      <div class="container">
-        <%= yield %>
-      </div><br><br>
       <%= render "/layouts/footer" %>
     </div>
   </body>

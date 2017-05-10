@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  quantity: "Quantity"
   currency: "$%{price}"
   please: "Please Login!"
   hello: "Hello world"
@@ -91,6 +92,7 @@ en:
     banner:
       find_restaurant: "Find the nearest restaurant"
   users:
+    title_p: "List Products"
     button_view: "Add"
     registrations:
       edit:
@@ -127,6 +129,8 @@ en:
       checkout: " Checkout "
       send: "Send"
   views:
+    inform: "Information Store"
+    contact_info: "Contact Info"
     layout:
       header:
         all_category: "All Category"

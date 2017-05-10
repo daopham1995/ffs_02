@@ -15,6 +15,13 @@ html,body {
 	height:auto;
 }
 /*class from bootstrap*/
+.list-products{
+	max-width: 95%;
+	padding:0 20px;
+	margin-right: auto;
+  margin-left: auto;
+}
+
 .container{
 	max-width:980px;
 	padding:0 20px;
@@ -485,9 +492,10 @@ html,body {
 	background:#d2d9df;
 	width:100%;
 	height:100%;
-    border:1px solid #ffffff;
+  border:1px solid #ffffff;
 	border-radius:100%;
-	line-height:68px;
+  line-height: 20px;
+  padding-top: 25px;
 	color:#FFF;
 	text-align:center;
 	font-size:16px;

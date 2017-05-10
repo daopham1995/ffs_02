@@ -4,6 +4,7 @@ vi:
   hello: "Chào thế giới"
   welcome: "Chào mừng đến với"
   login: "Đăng nhập"
+  quantity: "Số lượng"
   time:
     formats:
       date: "%d-%m-%Y"
@@ -71,6 +72,7 @@ vi:
       find_restaurant: "Tìm nhà hàng gần nhất"
 
   users:
+    title_p: "Danh sách sản phẩm"
     button_view: "Thêm"
     registrations:
       edit:
@@ -107,6 +109,8 @@ vi:
       checkout: " Thông tin "
       send: "Đặt hàng"
   views:
+    inform: "Thông tin cửa hàng"
+    contact_info: "Thông Tin Liên Hệ"
     layout:
       header:
         all_category: "Tất cả sản phẩm"

@@ -13,11 +13,10 @@
     <%= order_detail.unit_quantity %>
   </td>
   <td class="col-sm-2 col-md-2" id="order_detail_price">
-    <%= number_to_currency order_detail.unit_price %>
+    <%= t("currency", price: order_detail.unit_price) %>
   </td>
   <td class="col-sm-2 col-md-2" id="order_detail_total">
-    <%= number_to_currency order_detail.total %>
-  </td>
+    <%= t("currency", price: order_detail.total) %>
   <td class="col-sm-2 col-md-2" id="order_detail_bnt">
     <%= link_to order_detail_path(order_detail),
       method: :delete, class: "btn btn-danger",
