@@ -8,4 +8,8 @@ class Supports::Order
   def shops
     @shops = Shop.all
   end
+
+  def staffs
+    @staffs = Staff.all.where(position: "shipper")
+  end
 end

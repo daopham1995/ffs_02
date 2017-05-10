@@ -5,14 +5,15 @@ class Order < ApplicationRecord
   belongs_to :discount, optional: true
   belongs_to :shop, optional: true
   belongs_to :user, optional: true
+  belongs_to :staff, optional: true
 
   enum status: [:waiting, :accepted, :rejected, :finished]
   scope :unassign, -> {where shop_id: nil}
   scope :assign, -> {where.not shop_id: nil}
   scope :sort_by_create_at, -> {order created_at: :desc}
 
-  scope :shop_order, lambda { |staff|
-    where("shop_id = ?", staff.shop_id)
+  scope :staff_order, lambda { |staff|
+    where("staff_id = ?", staff.id)
   }
 
   scope :waiting_order, -> {where status: :waiting}

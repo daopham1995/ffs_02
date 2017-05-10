@@ -50,3 +50,107 @@
   </div>
   <div class="dashed"></div>
 </div>
+
+<div class="main-nav">
+  <div class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li>
+                <%= link_to root_path, class: "active" do %>
+                  <%= t "home" %>
+                <% end %>
+              <div class="curve"></div></li>
+              <li>
+                <%= link_to products_path do %>
+                  <%= t "views.admins.header.menu.product" %>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-7 header-menu">
+          <div class="menu-top-1">
+            <ul class="nav">
+              <li class="menu-top1-19">
+                <%= link_to "#" do %>
+                  <%= t "layouts.header.ship" %>
+                <% end %>
+                <div class="sub-content" id="sub-content-19">
+                  <%= t "layouts.header.ship_text" %>
+                </div>
+              </li>
+              <li>
+                <%= link_to "#" do %>
+                  <%= t "layouts.header.check" %>
+                <% end %>
+                <div class="sub-content" id="sub-content-17">
+                  <%= t "layouts.header.check_text" %>
+                </div>
+              </li>
+              <li class="menu-top1-20">
+                <%= link_to "#" do %>
+                  <%= t "layouts.header.money" %>
+                <% end %>
+                <div class="sub-content" id="sub-content-20">
+                  <%= t "layouts.header.money_text" %>
+                </div>
+              </li>
+              <li class="menu-top1-20">
+                <% if current_order.id %>
+                  <%= link_to order_path(current_order) do %>
+                    <span class="fa fa-cart-plus"></span>
+                    <%= t "layouts.header.cart" %>
+                    <div class="sub-content" id="sub-content-20">
+                      <%= t "layouts.header.cart_text" %>
+                    </div>
+                  <% end %>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-2 machart">
+          <button id="popcart" class="btn btn-default btn-chart btn-sm "><span class="mychart">Cart</span>|<span class="allprice">$0.00</span></button>
+          <div class="popcart">
+            <table class="table table-condensed popcart-inner">
+              <tbody>
+                <tr>
+                  <td>
+                  <a href="product.html"><img src="/assets/dummy-1.png" alt="" class="img-responsive"/></a>
+                  </td>
+                  <td><a href="product.html">Casio Exilim Zoom</a><br/><span>Color: green</span></td>
+                  <td>1X</td>
+                  <td>$138.80</td>
+                  <td><a href=""><i class="fa fa-times-circle fa-2x"></i></a></td>
+                </tr>
+              </tbody>
+            </table>
+            <span class="sub-tot">Sub-Total : <span>$277.60</span> | <span>Vat (17.5%)</span> : $36.00 </span>
+            <br/>
+            <div class="btn-popcart">
+              <a href="checkout.html" class="btn btn-default btn-red btn-sm">Checkout</a>
+              <a href="cart.html" class="btn btn-default btn-red btn-sm">More</a>
+            </div>
+            <div class="popcart-tot">
+              <p>
+                Total<br/>
+                <span>$313.60</span>
+              </p>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

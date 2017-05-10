@@ -1,33 +1,10 @@
-<div class="container">
-  <div class="menu-nav">
-    <ul class="nav">
-      <li>
-        <%= link_to products_path, remote: true do %>
-          <%= t "views.layout.header.all_category" %>
-        <% end %>
-        <% @categories.each do |category| %>
-          <%= link_to products_path(search_cate: {category_name: category}), remote: true do %>
-            <%= category %>
-          <% end %>
-        <% end %>
-      </li>
+<div class="desktop-header">
+  <div class="menu-slide">
+    <ul class="bxslider">
+      <% @combos.each do |combo| %>
+        <li><%= image_tag default_image(combo) %></li>
+      <% end %>
     </ul>
-  </div>
-  <div class="header-bottom">
-    <div class="row">
-      <div class="col-sm-4">
-        <div class="top-search">
-          <%= form_tag products_path, method: :get, id: "form-search", remote: true do %>
-            <%= text_field_tag :search, params[:search],
-              placeholder: t("views.input.value") %>
-            <%= button_tag do %>
-              <span class="glyphicon glyphicon-search"></span>
-            <% end %>
-            <div class="clearfix"></div>
-          <% end %>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 <div class="list-products">
