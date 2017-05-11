@@ -26,14 +26,16 @@
       <% if current_staff.admin? %>
         <%= form_for [:admin, order] do |f| %>
           <td>
-            <%= f.select :shop_id, @supports.shops.collect{|key| [key.name, key.id]},
+            <%= f.select :staff_id, @supports.staffs.collect{|key| [key.name, key.id]},
               class: "form-control" %>
+            <%= %>
+            <%= f.hidden_field :status, :value => "accepted" %>
           </td>
           <td>
-            <% if order.shop_id == nil %>
+            <% if order.staff_id == nil %>
               <%= f.submit t("admin.orders.list_orders.assign"), class: "btn btn-primary" %>
             <% else %>
-              <%= order.shop.name %>
+              <%= order.staff.name %>
             <% end %>
           </td>
         <% end %>

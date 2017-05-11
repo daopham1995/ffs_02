@@ -1,26 +1,29 @@
 <div class="row">
+  <div class="title-bg">
+    <div class="title"><%= t "users.title_p" %></div>
+  </div>
+  <div class="row prdct">
   <% @products.each do |product| %>
-    <div class="col-sm-3 col-xs-6">
-      <div class="item">
-        <div class="img-product">
+    <div class="col-md-3">
+      <div class="productwrap">
+        <div class="pr-img">
+          <div class="new"></div>
           <%= link_to "#", "data-toggle": "modal",
             "data-target": "#product_modal_#{product.id}" do %>
-            <div class="size-img-thumbnail">
-              <%= image_tag default_image(product) %>
+            <div class="img-responsive">
+            <%= image_tag default_image(product), class:"img-responsive" %>
             </div>
           <% end %>
+          <div class="pricetag blue">
+            <div class="inner"><%= t("currency", price: product.price) %></div>
+          </div>
         </div>
-        <div class="tittle-product">
-          <%= link_to "#" do %>
-            <%= product.name %>
-          <% end %>
-        </div>
-        <div class="price-product pull-left" style="color: red; font-size: 20px;">
-          <%= number_to_currency product.price %>
-        </div>
-        <div class="view-product pull-right">
+        <span class="smalltitle"><a href="#"><%= product.name %></a></span>
+        <span class="smalldesc">Item no.: <%= product.id %></span>
+        <div class="view-product">
           <%= link_to "#", "data-toggle": "modal",
-            "data-target": "#product_modal_#{product.id}", class: "btn-view" do %>
+            "data-target": "#product_modal_#{product.id}",
+            class: "btn-view" do %>
             <%= t "users.button_view" %>
           <% end %>
         </div>
@@ -29,4 +32,6 @@
     </div>
     <%= render "layouts/modal", product: product %>
   <% end %>
+  </div>
 </div>
+<div class="spacer"></div>

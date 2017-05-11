@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     get 'hello_world', to: 'hello_world#index'
     devise_for :staffs, controllers: {sessions: "staffs/sessions"}
     devise_for :users, controllers: {registrations: "users/registrations"}
-    root "products#index"
+    root "combos#index"
     devise_scope :staff do
       get "staffs/pages/*page", to: "staffs/pages#show", page: "home", as: "staff_root"
     end
@@ -19,6 +19,7 @@ Rails.application.routes.draw do
       get "shippers/*page", to: "shippers#index", page: "index", as: "shipper_order"
     end
 
+    resources :combos, only: [:show, :index]
     resources :products, only: [:show, :index]
     resources :order_details, except: [:show]
     resources :orders

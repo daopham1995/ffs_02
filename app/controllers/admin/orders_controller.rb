@@ -29,6 +29,6 @@ class Admin::OrdersController < ApplicationController
 
   private
   def order_params
-    params.require(:order).permit :shop_id, :status
+    params.require(:order).permit :staff_id, :status
   end
 end

@@ -1,55 +1,4 @@
 <div class="desktop-header">
-  <div class="header">
-    <div class="container">
-      <div class="row">
-        <div class="menu-top">
-          <div class="col-sm-4">
-          </div>
-        </div>
-        <div class="menu-top-1">
-          <div class="col-sm-8">
-            <ul class="nav">
-              <li class="menu-top1-19">
-                <%= link_to "#" do %>
-                  <%= t "layouts.header.ship" %>
-                <% end %>
-                <div class="sub-content" id="sub-content-19">
-                  <%= t "layouts.header.ship_text" %>
-                </div>
-              </li>
-              <li>
-                <%= link_to "#" do %>
-                  <%= t "layouts.header.check" %>
-                <% end %>
-                <div class="sub-content" id="sub-content-17">
-                  <%= t "layouts.header.check_text" %>
-                </div>
-              </li>
-              <li class="menu-top1-20">
-                <%= link_to "#" do %>
-                  <%= t "layouts.header.money" %>
-                <% end %>
-                <div class="sub-content" id="sub-content-20">
-                  <%= t "layouts.header.money_text" %>
-                </div>
-              </li>
-              <li class="menu-top1-20">
-                <% if current_order.id %>
-                  <%= link_to order_path(current_order) do %>
-                    <span class="fa fa-cart-plus"></span>
-                    <%= t "layouts.header.cart" %>
-                    <div class="sub-content" id="sub-content-20">
-                      <%= t "layouts.header.cart_text" %>
-                    </div>
-                  <% end %>
-                <% end %>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <div class="container">
     <div class="header-bottom">
       <div class="row">
@@ -68,45 +17,6 @@
             </div>
             <span><%= t "layouts.header.phone" %></span>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <% if current_page?(root_path) %>
-    <%= render "/layouts/slide" %>
-  <% end %>
-  <div class="container">
-    <% if current_page?(products_path) || current_page?(root_path) %>
-      <div class="menu-nav">
-        <ul class="nav">
-          <li>
-            <%= link_to products_path, remote: true do %>
-              <%= t "views.layout.header.all_category" %>
-            <% end %>
-            <% @categories.each do |category| %>
-              <%= link_to products_path(search_cate: {category_name: category}), remote: true do %>
-                <%= category %>
-              <% end %>
-            <% end %>
-          </li>
-        </ul>
-      </div>
-    <% end %>
-    <div class="header-bottom">
-      <div class="row">
-        <div class="col-sm-4">
-          <% if current_page?(products_path) || current_page?(root_path) %>
-            <div class="top-search">
-              <%= form_tag products_path, method: :get, id: "form-search", remote: true do %>
-                <%= text_field_tag :search, params[:search],
-                  placeholder: t("views.input.value") %>
-                <%= button_tag do %>
-                  <span class="glyphicon glyphicon-search"></span>
-                <% end %>
-                <div class="clearfix"></div>
-              <% end %>
-            </div>
-          <% end %>
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ class Admin::ShippersController < ApplicationController
   layout "staffs_layout"
 
   def index
-    @orders = Order.shop_order(current_staff).ready_order
+    @orders = Order.staff_order(current_staff).ready_order
   end
 
   def edit

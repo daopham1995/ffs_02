@@ -9,27 +9,28 @@ export default class Footer extends React.Component {
             <div className="row">
               <div className="col-md-4">
                 <div className="title-widget-bg">
-                  <div className="title-widget">Twitter Updates</div>
+                  <div className="title-widget">{I18n.t('views.inform')}</div>
                 </div>
                 <ul className="tweets">
-                  <li>Check out this great #themeforest item for you
-                  'Simpler Landing' <a href="#">http://t.co/LbLwldb6 </a>
-                  <span>2 hours ago</span></li>
-                  <li className="lastone">Check out this great #themeforest item for you
-                  'Simpler Landing' <a href="#">http://t.co/LbLwldb6 </a>
-                  <span>2 hours ago</span></li>
+                  <li>{I18n.t('layouts.footer.company_name')}
+                    <a href="http://recruit.framgia.vn">http://recruit.framgia.vn/</a>
+                  </li>
+                  <li className="lastone">{I18n.t('layouts.footer.company_add')}</li>
                 </ul>
                 <div className="clearfix"></div>
                 <a href="#" className="btn btn-default btn-follow"><i className="fa fa-twitter fa-2x"></i><div>Follow us on twitter</div></a>
               </div>
               <div className="col-md-4">
                 <div className="title-widget-bg">
-                  <div className="title-widget">Newsletter Signup</div>
+                  <div className="title-widget">{I18n.t('layouts.footer.support')}</div>
                 </div>
                 <div className="newsletter">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
+                  <li>
+                    {I18n.t('layouts.footer.support_1')}
+                  </li>
+                  <li>
+                    {I18n.t('layouts.footer.support_2')}
+                  </li>
                   <form role="form">
                     <div className="form-group">
                       <label>Your Email address</label>
@@ -41,12 +42,12 @@ export default class Footer extends React.Component {
               </div>
               <div className="col-md-4">
                 <div className="title-widget-bg">
-                  <div className="title-widget-cursive">Shopping</div>
+                  <div className="title-widget-cursive">{I18n.t('views.contact_info')}</div>
                 </div>
                 <ul className="contact-widget">
-                  <li className="fphone">+387 123 456, +387 123 456 <br /> +387 123 456</li>
-                  <li className="fmobile">+387-123-456-1<br />+387-123-456-2</li>
-                  <li className="fmail lastone">your@email.com<br />customer.care@mail.com</li>
+                  <li className="fphone"> +387 123 456</li>
+                  <li className="fmobile">+0967 648 290</li>
+                  <li className="fmail lastone">daopt22@gmail.com</li>
                 </ul>
               </div>
             </div>

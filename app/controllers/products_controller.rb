@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
       @products = category.products
     elsif params[:search].present?
       @products = Product.search_product(params[:search])
-    else  
+    else
       @products = Product.all
     end
   end
